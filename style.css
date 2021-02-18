@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', 'sans-serif';
+    background: #F1F1EF;
+}
+
+/* Global */
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+}
+
+li {
+    list-style-type: none;
+    padding-left: 30px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+a {
+    color: #000;
+    display: inline-block;
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+    text-decoration: underline;
+    transform: scale(0.9);
+    transition: all 300ms ease-in;
+}
+
+.main__container {
+    display: flex;
+}
+
+.left__container {
+    height: 100vh;
+    flex: 0.5;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header__logo {
+    background: #fff;
+    width: 130px;
+    height: 100px;
+    margin-top: 30px;
+    margin-left: 40px;
+    object-fit: contain;
+}
+
+.leftContainer__span {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    margin-left: 40px;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.leftContainer__description {
+    font-style: normal;
+    font-weight: normal;
+    width: 70%;
+    font-size: 18px;
+    margin-left: 40px;
+    padding-bottom: 50px;
+    line-height: 137.02%;
+    color: #868686;
+}
+
+.leftContainer__construction {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    padding-bottom: 50px;
+    margin-left: 40px;
+    line-height: 104.52%;
+    /* or 42px */
+    color: #333333;
+}
+
+.right__container {
+    height: 100vh;
+    flex: 0.5;
+    background: url('images/background.jpg') no-repeat;
+    background-size: 670px;
+    background-position: bottom right;
+}
+
+/* Form */
+input {
+    background: none;
+    border: none;
+    color: #333333;
+    padding: 5px;
+    width: 60%;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    margin-left: 40px;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: left;
+    border-bottom: 2px solid #333333;
+}
+
+input:focus {
+    outline: none;
+    width: 80%;
+    transition: all 300ms ease-in;
+}
+
+.userInput {
+    margin-bottom: 60px;
+}
+
+.userInput>label {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    margin-left: 20px;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #333333;
+}
+
+.submit__button {
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 40px;
+    font-weight: 700;
+    border: none;
+    transition: all 300ms ease-in;
+}
+
+.submit__button:hover {
+    background-color: #333333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.submit__button:focus {
+    outline: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .main__container {
+        flex-direction: column;
+        max-width: 100vh;
+    }
+
+    .header__logo {
+        padding-bottom: 30px;
+    }
+
+    .left__container {
+        min-height: 93vh;
+    }
+
+    .leftContainer__description {
+        font-size: 30px;
+    }
+
+    .right__container {
+        max-height: 10vh;
+    }
+
+    ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main__container {
+        flex-direction: column;
+        max-width: 100vh;
+    }
+
+    .header__logo {
+        padding-bottom: 30px;
+    }
+    .left__container {
+        min-height: 90vh;
+    }
+
+    .leftContainer__description {
+        font-size: 16px;
+    }
+
+    .leftContainer__construction {
+        font-size: 20px;
+    }
+
+    input {
+        font-size: 20px;
+    }
+
+    ul {
+        max-height: 30vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .main__container { 
+        flex-direction: column;
+    }
+
+    .left__container {
+        min-width: 100vw;
+    }
+}
+
+@media screen and (min-height: 1024px) {
+    .right__container {
+        background-size: 820px;
+    }
+}
